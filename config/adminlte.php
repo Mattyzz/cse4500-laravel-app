@@ -242,7 +242,7 @@ return [
         [         
             'text' => 'Board',
             'url'  => 'board',
-            'icon' => 'fa-solid fa-calendars',
+            'icon' => 'fas fa-fw fa-calendar-alt',
         ],
     ],
     
