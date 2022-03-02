@@ -6,8 +6,6 @@
     <h1>Calendar</h1>
 @stop
 
-//Copied from Canvas
-
 @section('content')
 <div class="row">
   <div class="col-md-12">

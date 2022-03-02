@@ -7,7 +7,6 @@
 @section('content_header')
     <h1>To Do's</h1>
 @stop
-//Copied from example on Canvas
 
 @section('content')
 <div class="card">
