@@ -37,7 +37,7 @@ Route::fallback(function (){
     return view('error');
 });
 
-Route::get('/dh-test'. function(){
+Route::get('/dh-test', function(){
     try {
         \DB::connection()->getPDO();
         $db_name = \DB::connection()->getDatabaseName();
