@@ -35,6 +35,27 @@ Route::get('/events-feed', function () {
     return view('events-feed');
 });
 
+/*
+Shown in class, I did this a different way by making a blade to reference.
+blade is not a standard way of json it will be easier to retrive the data from the backend.
+Route::get('/events-feed', function() {
+    $data = array(
+        array(
+            'title' => "CSE4500 Class",
+            'start' => "2022-02-23T17:30:00",
+            'end' => "2022-02-23T18:45:00"
+        ),
+        array(
+            'title' => "CSE4500 Class",
+            'start' => "2022-02-28-T17:30:00",
+            'end' => "2022-02-28T18:45:00"
+        )
+        );
+        return json_encode($data);
+});
+ */
+
+ //Catch for user going to a route that doesn't exist.
 Route::fallback(function (){
     return view('error');
 });
