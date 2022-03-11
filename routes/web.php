@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TodoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,8 @@ Route::get('/', function () {
 
 URL::forceScheme('https');
 
-Route::get('/todos', function () {
-    return view('todos');
-});
+
+Route::get('/todos', TodoController::class);
 
 Route::get('/calendar', function () {
     return view('calendar');
