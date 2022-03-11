@@ -11,7 +11,7 @@
     @csrf
     <x-adminlte-input name="title" label="Title" />
     <x-adminlte-input name="progress" type="number" min=0 max=100 label="Progress" />
-    <x-adminlte-input-button type="Submit" label="Submit" />
+    <x-adminlte-button type="Submit" label="Submit" />
 </form>
 @stop
 
