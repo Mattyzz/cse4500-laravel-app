@@ -20,6 +20,9 @@ Route::get('/', function () {
 
 URL::forceScheme('https');
 
+Route::get('/todos', function () {
+    return view('todos');
+});
 
 Route::get('/todos', TodoController::class);
 
