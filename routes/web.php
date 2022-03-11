@@ -20,11 +20,8 @@ Route::get('/', function () {
 
 URL::forceScheme('https');
 
-Route::get('/todos', function () {
-    return view('todos');
-});
 
-Route::get('/todos', TodoController::class);
+Route::resource('/todos', TodoController::class);
 
 Route::get('/calendar', function () {
     return view('calendar');
