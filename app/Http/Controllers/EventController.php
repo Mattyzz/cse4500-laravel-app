@@ -14,7 +14,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('calendar');
+        $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
+        return json_encode(('events')['events']);
     }
 
     /**
@@ -43,6 +44,7 @@ class EventController extends Controller
         ]);
 
         //After validation happens then call the Event model to create a new record and save the data in the database
+        //Maybe save in Data?
         $events = Event::create([
             'title' => $request->title,
             'start_at' => $request->start_at,
@@ -62,7 +64,7 @@ class EventController extends Controller
     public function show($id)
     {
         $events = Event::find($id);
-        return view('events.show',compact('event'));
+        return view('events.show',compact('events'));
     }
 
     /**
