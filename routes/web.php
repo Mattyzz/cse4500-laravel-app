@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 URL::forceScheme('https');
 
+Route::resource('/events', EventController::class);
 
 Route::resource('/todos', TodoController::class);
 
@@ -40,7 +41,6 @@ Route::get('/events-feed', function () {
 Shown in class, I did this a different way by making a blade to reference.
 blade is not a standard way of json it will be easier to retrive the data from the backend.
 */
-Route::resource('/events', EventController::class);
 /*    $data = array(
         array(
             'title' => "CSE4500 Class",
