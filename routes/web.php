@@ -41,9 +41,7 @@ Shown in class, I did this a different way by making a blade to reference.
 blade is not a standard way of json it will be easier to retrive the data from the backend.
 */
 Route::resource('/events', EventController::class);
-
-Route::get('/events', function() {
-    $data = array(
+/*    $data = array(
         array(
             'title' => "CSE4500 Class",
             'start_at' => "2022-02-23T17:30:00",
@@ -55,7 +53,11 @@ Route::get('/events', function() {
             'end_at' => "2022-02-28T18:45:00"
         )
         );
-        return json_encode($data);
+        return json_encode($data); 
+        */
+Route::get('/events', function() {
+        $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
+        return json_encode(('events')['events']);
         //$eventsfeed = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
 });
 
