@@ -51,7 +51,7 @@ class EventController extends Controller
             'end_at' => date($request->end_at),
         ]);
 
-        return view('calendar');
+        return redirect('/calendar');
     }
         
 

@@ -3,7 +3,7 @@
 @section('title', 'To Do List')
 
 @section('content_header')
-    <h1>Calendar</h1>
+    <h1>Calendar Events</h1>
 @stop
 
 @section('content')
@@ -29,5 +29,5 @@
 @stop
 
 @section('js')
-    <script> console.log('Look the create todos page.'); </script>
+    <script> console.log('Look the create events page.'); </script>
 @stop
