@@ -15,7 +15,7 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
-        return json_encode(('events')['events']);
+        return json_encode(compact('events')['events']);
     }
 
     /**
