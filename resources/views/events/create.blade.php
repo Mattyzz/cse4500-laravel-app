@@ -17,7 +17,7 @@
 
        <label for="end_at">Choose a end date and end time for your Event:</label>
 
-    <ix-adminlte-input type="datetime-local" name="end_at"/>
+    <x-adminlte-input type="datetime-local" name="end_at"/>
 
 
     <x-adminlte-button type="Submit" label="Submit" />
