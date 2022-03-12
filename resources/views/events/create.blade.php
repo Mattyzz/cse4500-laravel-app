@@ -13,11 +13,11 @@
     
     <label for="start_at">Choose a start date and start time for your Event:</label>
 
-    <x-adminlte-input type="datetime-local" name="start_at"/>
+    <x-adminlte-input type="datetime-local" name="start_at" label="Begin"/>
 
        <label for="end_at">Choose a end date and end time for your Event:</label>
 
-    <x-adminlte-input type="datetime-local" name="end_at"/>
+    <x-adminlte-input type="datetime-local" name="end_at" label="Finish"/>
 
 
     <x-adminlte-button type="Submit" label="Submit" />
