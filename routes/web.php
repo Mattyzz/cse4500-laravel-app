@@ -55,11 +55,6 @@ Route::resource('/events', EventController::class);
         );
         return json_encode($data); 
         */
-Route::get('/events', function() {
-        $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
-        return json_encode(('events')['events']);
-        //$eventsfeed = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
-});
 
  //Catch for user going to a route that doesn't exist.
 Route::fallback(function (){
