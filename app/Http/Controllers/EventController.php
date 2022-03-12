@@ -14,7 +14,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        //Not needed, calendar retrieves data
+        return view('calendar');
     }
 
     /**
@@ -49,7 +49,7 @@ class EventController extends Controller
             'end_at' => $request->end_at,
         ]);
 
-        return $this->index();
+        return view('calendar');
     }
         
 
