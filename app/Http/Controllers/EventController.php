@@ -47,8 +47,8 @@ class EventController extends Controller
         //Maybe save in Data?
         $events = Event::create([
             'title' => $request->title,
-            'start_at' => $request->start_at,
-            'end_at' => $request->end_at,
+            'start_at' => date($request->start_at),
+            'end_at' => date($request->end_at),
         ]);
 
         return view('calendar');
