@@ -13,15 +13,11 @@
     
     <label for="start_at">Choose a start date and start time for your Event:</label>
 
-    <input type="datetime-local" id="start_at"
-       name="start_at" value="2022-03-01T19:30"
-       min="2018-06-07T00:00" max="2023-06-14T00:00">
+    <input type="datetime-local" name="start_at" value="2022-03-01T19:30">
 
        <label for="end_at">Choose a end date and end time for your Event:</label>
 
-    <input type="datetime-local" id="end_at"
-     name="end_at" value="2022-03-01T19:30"
-     min="2018-06-07T00:00" max="2023-06-14T00:00">
+    <input type="datetime-local" name="end_at" value="2022-03-01T19:30">
 
 
     <x-adminlte-button type="Submit" label="Submit" />
