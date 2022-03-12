@@ -24,7 +24,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('eventsfeed.create');
+        return view('events.create');
     }
 
     /**
@@ -43,7 +43,7 @@ class EventController extends Controller
         ]);
 
         //After validation happens then call the Event model to create a new record and save the data in the database
-        $eventsfeed = Event::create([
+        $events = Event::create([
             'title' => $request->title,
             'start_at' => $request->start_at,
             'end_at' => $request->end_at,
@@ -62,7 +62,7 @@ class EventController extends Controller
     public function show($id)
     {
         $eventsfeed = Event::find($id);
-        return view('eventsfeed.show',compact('calendar'));
+        return view('events.show',compact('calendar'));
     }
 
     /**

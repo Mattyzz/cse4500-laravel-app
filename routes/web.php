@@ -40,9 +40,9 @@ Route::get('/events-feed', function () {
 Shown in class, I did this a different way by making a blade to reference.
 blade is not a standard way of json it will be easier to retrive the data from the backend.
 */
-Route::resource('/eventsfeed', EventController::class);
-/*
-Route::get('/eventsfeed', function() {
+Route::resource('/events', EventController::class);
+
+Route::get('/events', function() {
     $data = array(
         array(
             'title' => "CSE4500 Class",
@@ -58,7 +58,7 @@ Route::get('/eventsfeed', function() {
         return json_encode($data);
         //$eventsfeed = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
 });
-*/
+
  //Catch for user going to a route that doesn't exist.
 Route::fallback(function (){
     return view('error');
