@@ -27,7 +27,21 @@ Route::resource('/todos', TodoController::class);
 Route::get('/calendar', function () {
     return view('calendar');
 });
-
+Route::get('/events', function () {
+    $data = array(
+        array(
+            'title' => "CSE4500 Class",
+            'start_at' => "2022-02-23T17:30:00",
+            'end_at' => "2022-02-23T18:45:00"
+        ),
+        array(
+            'title' => "CSE4500 Class",
+            'start_at' => "2022-02-28-T17:30:00",
+            'end_at' => "2022-02-28T18:45:00"
+        )
+        );
+        return json_encode($data); 
+});
 Route::resource('/events', EventController::class);
 
 Route::get('/board', function () {
