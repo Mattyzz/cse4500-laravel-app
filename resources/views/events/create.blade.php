@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form method="post" action="{{ route('eventsfeed.store') }}">
+<form method="post" action="{{ route('events.store') }}">
     @csrf
     <x-adminlte-input name="title" label="Title" />
     
