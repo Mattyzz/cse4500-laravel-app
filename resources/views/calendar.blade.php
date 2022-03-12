@@ -17,6 +17,8 @@
     </div>
   </div>
 </div>
+<a href="{{ route('eventsfeed.create') }}" class="btn btn-primary">Create New Event</a>
+
 @stop
 
 @section('css')
@@ -29,7 +31,7 @@
 $( document ).ready(function() {
     var calendar = new FullCalendar.Calendar($('#calendar')[0], {
       initialView: 'dayGridMonth',
-      events: '/events-feed'
+      events: {{$eventsfeed = Event::select('title', 'start_at AS start', 'end_at AS end')-get();}}
     });
     calendar.render();
 })
